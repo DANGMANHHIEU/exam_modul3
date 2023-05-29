@@ -140,4 +140,12 @@ public class Dao {
        return null;
    }
 
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        Dao dao = new Dao();
+        List<Staff> staffList = dao.getAllStaff();
+        for (Staff staff : staffList){
+            System.out.println(staff);
+        }
+
+    }
 }

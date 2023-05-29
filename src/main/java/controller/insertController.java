@@ -13,6 +13,7 @@ import java.io.IOException;
 
 @WebServlet(name="insertController",value = "/add")
 public class insertController extends HttpServlet {
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
@@ -31,6 +32,6 @@ public class insertController extends HttpServlet {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        resp.sendRedirect("managerProduct");
+        resp.sendRedirect("Create.jsp");
     }
 }

@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "LoadEditController",value = "loadStaffEdit")
+@WebServlet(name = "LoadEditController",value = "/loadStaffEdit")
 
 public class LoadEditController extends HttpServlet {
 
@@ -30,9 +30,9 @@ public class LoadEditController extends HttpServlet {
         public void detail(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, SQLException, ClassNotFoundException {
             String id = req.getParameter("staffId");
             Dao dao = new Dao();
-            Staff getProducByID = dao.getStaffByID(id);
+            Staff getStaffByID = dao.getStaffByID(id);
 
-            req.setAttribute("detail", getProducByID);
+            req.setAttribute("staff", getStaffByID);
             RequestDispatcher dispatcher = req.getRequestDispatcher("Edit.jsp");
             dispatcher.forward(req, resp);
         }

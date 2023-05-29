@@ -33,7 +33,7 @@
             <th>Phân loại</th>
             <th>Thao tác</th>
         </tr>
-        <c:forEach var="staff" items="${listStaff}">
+        <c:forEach var="staff" items="${ListStaff}">
             <tr>
                 <td><c:out value="${staff.id}"/></td>
                 <td><c:out value="${staff.name}"/></td>

@@ -13,9 +13,9 @@ import java.io.IOException;
 public class DeleteController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String id = req.getParameter("pid");
+        String id = req.getParameter("id");
         Dao dao = new Dao();
         dao.deleteStaff(id);
-        resp.sendRedirect("managerProduct");
+        resp.sendRedirect("Home.jsp");
     }
 }

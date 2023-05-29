@@ -11,7 +11,7 @@ public class DBContext {
     public Connection getConnection() {
         Connection connection = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(URL, USER, PASS);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -19,5 +19,11 @@ public class DBContext {
             e.printStackTrace();
         }
         return connection;
+    }
+
+    public static void main(String[] args) {
+        Connection connection;
+        connection = new DBContext().getConnection();
+        System.out.println(connection);
     }
 }

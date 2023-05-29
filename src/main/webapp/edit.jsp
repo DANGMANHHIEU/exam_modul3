@@ -86,7 +86,7 @@
           <th>Department: </th>
           <td>
             <input type="text" name="department" size="5"
-                   value="<c:out value='${staff.department.id}' />"
+                   value="<c:out value='${staff.department_id}' />"
             />
           </td>
         </tr>
